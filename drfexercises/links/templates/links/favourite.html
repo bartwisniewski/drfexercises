@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+<!--Block content goes below-->
+  {% block content %}
+    <div class="box">
+      <p>Here are my {{ links|length }} favourite websites:</p>
+      <ul>
+        {% for link in links %}
+          <li> {{ link }} </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  {% endblock %}
