@@ -1,13 +1,21 @@
 from django.shortcuts import render
-from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login, get_user_model
+
 from django.views.generic.edit import FormView
+from django.views.generic.base import TemplateView
+from .forms import MyUserCreationForm
+
+
 # Create your views here.
+
+
+class DashboardView(TemplateView):
+    template_name = "usermanagement/dashboard.html"
 
 
 class RegisterFormView(FormView):
     template_name = 'usermanagement/register.html'
-    form_class = UserCreationForm
+    form_class = MyUserCreationForm
     success_url = '/'
 
     def post(self, request, *args, **kwargs):
