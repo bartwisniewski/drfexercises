@@ -130,3 +130,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/user/login/'
 LOGIN_REDIRECT_URL = '/user/dashboard'
 LOGOUT_REDIRECT_URL = '/user/login/'
+
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = BASE_DIR / "sent_emails"

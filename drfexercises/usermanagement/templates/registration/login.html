@@ -26,7 +26,10 @@
     </form>
         </div>
     <div class="buttons">
-      <p class="mr-1">If you don't have an account: </p> <a class="is-link" href="{% url 'register' %}">Register</a>
+        <p><span class="mr-1">If you don't have an account:</span><a class="is-link" href="{% url 'register' %}">Register</a></p>
+    </div>
+    <div class="buttons">
+        <p><span class="mr-1">Forgot password?:</span><a class="is-link" href="{% url 'password_reset' %}">Reset!</a></p>
     </div>
 </div>
 

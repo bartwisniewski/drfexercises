@@ -6,6 +6,10 @@
 <div class="section">
     <div class="box">
         <h1>Hi {{user.username}}</h1>
+        <h2>You’ve been with us since: {{joined}} </h2>
+        {% if last_failed_login %}
+            <h2 class="has-text-danger" >Last failed login attempt: {{last_failed_login}} </h2>
+        {% endif %}
     </div>
 </div>
 

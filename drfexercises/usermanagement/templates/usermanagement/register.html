@@ -29,6 +29,13 @@
 				<p class="help is-danger">{{ form.password2.errors }}</p>
 			{% endif %}
 		</div>
+		<div class="field">
+			<label class="label">{{ form.email.label_tag }}</label>
+			<div class="control">{{ form.email }}</div>
+			{% if form.email.errors %}
+				<p class="help is-danger">{{ form.email.errors }}</p>
+			{% endif %}
+		</div>
 		<div class="control">
 			<button type="submit" class="button is-primary">Register</button>
 		</div>
