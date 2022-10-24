@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="section">
+    <div class="box">
+    <h2>Pumps</h2>
+    <ul>
+        {% for pump in pumps %}
+            <li>{{ pump.tag}}, running = {{ pump.on}}</li>
+        {% endfor %}
+    </ul>
+    </div>
+</div>
+
+
+{% endblock %}

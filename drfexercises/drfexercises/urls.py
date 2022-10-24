@@ -20,7 +20,10 @@ from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('', RedirectView.as_view(pattern_name='favourite')),
+    path('api/', include('API.urls')),
     path('links/', include('links.urls')),
+    path('customers/', include('customers.urls')),
+    path('processautomation/', include('processautomation.urls')),
     path('user/', include('usermanagement.urls')),
     path('admin/', admin.site.urls),
 

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="section">
+    <div class="box">
+        <h2>Customers:</h2>
+        <ul>
+            {% for customer in customers %}
+                <li>{{ customer.name}}, basket ID: {{ customer.basket.id}}</li>
+            {% endfor %}
+        </ul>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="control">
+                <button type="submit" class="button is-primary">Generate Customer</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
