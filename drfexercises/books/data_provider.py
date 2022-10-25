@@ -22,11 +22,8 @@ def get_books_data(set_name: str) -> dict:
 
 
 def google_data_to_django(data: dict) -> None:
-    print("google data to django")
     it = 1
     for book in data.get('items'):
-        print(f"book number {it}")
-        print(book)
         it += 1
         volume_info = book.get('volumeInfo')
         defaults = {'etag': book.get('etag'),
